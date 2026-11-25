@@ -77,10 +77,19 @@
   const inviteText = 'Присоединяйся к NEXUS: Discord @nexus-cs2, Telegram @nexus_cs2. Ищем Sixth игрока в команду друзей по CS2.';
 
   async function copyInvite() {
-    try {
-      if (navigator.clipboard && window.isSecureContext) {
+    let copied = false;
+
+    if (navigator.clipboard && window.isSecureContext) {
+      try {
         await navigator.clipboard.writeText(inviteText);
-      } else {
+        copied = true;
+      } catch (error) {
+        copied = false;
+      }
+    }
+
+    if (!copied) {
+      try {
         const field = document.createElement('textarea');
         field.value = inviteText;
         field.setAttribute('readonly', '');
@@ -88,13 +97,14 @@
         field.style.opacity = '0';
         document.body.appendChild(field);
         field.select();
-        document.execCommand('copy');
+        copied = document.execCommand('copy');
         field.remove();
+      } catch (error) {
+        copied = false;
       }
-      showToast('Приглашение скопировано');
-    } catch (error) {
-      showToast('Не удалось скопировать — используйте контакты в подвале');
     }
+
+    showToast(copied ? 'Приглашение скопировано' : 'Не удалось скопировать — используйте контакты в подвале');
   }
 
   $$('#copyInvite, #copyInviteFooter, [data-copy-invite]').forEach((button) => {

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS — команда друзей по CS2</title>
+  <meta name="description" content="NEXUS — команда друзей по Counter-Strike 2: состав, матчи, турниры, новости и набор в команду.">
+  <meta name="theme-color" content="#080c14">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<div class="page-grid" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="brand" href="#main" aria-label="NEXUS — на главную">
+      <img src="assets/img/logo.svg" alt="" width="42" height="42">
+      <span class="brand__text"><strong>NEXUS</strong><small>cs2 friends team</small></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="#team">Команда</a>
+      <a href="#matches">Матчи</a>
+      <a href="#news">Новости</a>
+      <a href="#maps">Карты</a>
+      <a href="#join">Вступление</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="btn btn--ghost btn--small header__invite" id="copyInvite" type="button">Приглашение</button>
+      <a class="btn btn--small header__join" href="#join">В команду</a>
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Герой -->
+  <section class="hero" id="top">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <span class="eyebrow"><span class="pulse"></span> Открыт набор в состав</span>
+        <h1>Пять на пятеро.<br><em>Одна победа.</em></h1>
+        <p>Мы — команда друзей по CS2. Играем вечером после работы, ездим на локальные турниры и доказываем, что слаженность важнее звёздных ников.</p>
+        <div class="hero__buttons">
+          <a class="btn" href="#team">Смотреть команду</a>
+          <a class="btn btn--ghost" href="#matches">Ближайшие матчи</a>
+        </div>
+        <dl class="hero__stats">
+          <div><dt>Игроков</dt><dd>05</dd></div>
+          <div><dt>Турниров</dt><dd>18</dd></div>
+          <div><dt>Побед</dt><dd>63%</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="radar">
+          <span class="radar__ring radar__ring--one"></span>
+          <span class="radar__ring radar__ring--two"></span>
+          <span class="radar__ring radar__ring--three"></span>
+          <span class="radar__cross radar__cross--x"></span>
+          <span class="radar__cross radar__cross--y"></span>
+          <span class="radar__dot radar__dot--a"></span>
+          <span class="radar__dot radar__dot--b"></span>
+          <span class="radar__dot radar__dot--c"></span>
+        </div>
+        <div class="score-card">
+          <div class="score-card__top"><span>ФИНАЛ · BO3</span><span>28 ноября, 20:00</span></div>
+          <div class="score-card__teams">
+            <div><b>NXS</b><small>наша команда</small></div>
+            <strong>2 : 1</strong>
+            <div><b>TTF</b><small>соперник</small></div>
+          </div>
+          <div class="score-card__maps">Mirage 16:14 · Inferno 9:16 · Nuke 16:12</div>
+        </div>
+        <span class="hero__sticker">GG WP</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Команда -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <span class="eyebrow">Состав</span>
+          <h2>Наша пятёрка</h2>
+          <p class="section__lead">Каждый отвечает за свою зону. Вместе — за результат.</p>
+        </div>
+        <span class="section__meta">Обновлено: ноябрь 2026</span>
+      </div>
+
+      <div class="roster">
+        <article class="player" data-reveal>
+          <div class="player__avatar player__avatar--cyan"><span>VX</span><i class="player__online" title="В сети"></i></div>
+          <span class="player__role">IGL · капитан</span>
+          <h3>Vortex</h3>
+          <p>Читает карту, держит темп и спокойно доводит клатчи.</p>
+          <div class="player__stats"><div><strong>1.12</strong><span>рейтинг</span></div><div><strong>62%</strong><span>победы</span></div></div>
+        </article>
+        <article class="player" data-reveal>
+          <div class="player__avatar player__avatar--violet"><span>KR</span><i class="player__online" title="В сети"></i></div>
+          <span class="player__role">AWP · снайпер</span>
+          <h3>Kray</h3>
+          <p>Занимает угол и не подпускает соперника к плейсу.</p>
+          <div class="player__stats"><div><strong>1.24</strong><span>рейтинг</span></div><div><strong>68%</strong><span>AWP-дуэли</span></div></div>
+        </article>
+        <article class="player" data-reveal>
+          <div class="player__avatar player__avatar--green"><span>MK</span></div>
+          <span class="player__role">Entry · первый</span>
+          <h3>M1ku</h3>
+          <p>Врывается первым, собирает информацию и открывает раунд.</p>
+          <div class="player__stats"><div><strong>1.08</strong><span>рейтинг</span></div><div><strong>54%</strong><span>открытия</span></div></div>
+        </article>
+        <article class="player" data-reveal>
+          <div class="player__avatar player__avatar--orange"><span>SH</span><i class="player__online" title="В сети"></i></div>
+          <span class="player__role">Support · саппорт</span>
+          <h3>Shift</h3>
+          <p>Умеет вовремя подстраховать и оставить команду без потерь.</p>
+          <div class="player__stats"><div><strong>1.03</strong><span>рейтинг</span></div><div><strong>71%</strong><span>клатчи</span></div></div>
+        </article>
+        <article class="player" data-reveal>
+          <div class="player__avatar player__avatar--blue"><span>ZD</span></div>
+          <span class="player__role">Rifler · универсал</span>
+          <h3>Zed</h3>
+          <p>Играет от ситуации: закрывает фланги и добирает урон.</p>
+          <div class="player__stats"><div><strong>1.15</strong><span>рейтинг</span></div><div><strong>60%</strong><span>победы</span></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Матчи -->
+  <section class="section section--alt" id="matches">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <span class="eyebrow">Календарь</span>
+          <h2>Наши матчи</h2>
+          <p class="section__lead">Ближайшие игры и результаты последних турниров.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Фильтр матчей">
+          <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="upcoming">Предстоящие <span>2</span></button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="result">Результаты <span>3</span></button>
+        </div>
+      </div>
+
+      <div class="match-list" id="matchList">
+        <article class="match" data-type="upcoming">
+          <div class="match__date"><strong>28</strong><span>НОВ</span></div>
+          <div class="match__teams"><b>NXS</b><span>vs</span><b>TTF</b></div>
+          <div class="match__info"><strong>Открытый кубок NN</strong><span>BO3 · 20:00 · Mirage / Nuke / Ancient</span></div>
+          <span class="status status--soon">Сегодня</span>
+        </article>
+        <article class="match" data-type="upcoming">
+          <div class="match__date"><strong>05</strong><span>ДЕК</span></div>
+          <div class="match__teams"><b>NXS</b><span>vs</span><b>RVN</b></div>
+          <div class="match__info"><strong>Зимняя лига · 1/4 финала</strong><span>BO3 · 19:30 · Inferno / Mirage / Dust2</span></div>
+          <span class="status">Через неделю</span>
+        </article>
+        <article class="match" data-type="result">
+          <div class="match__date"><strong>21</strong><span>НОВ</span></div>
+          <div class="match__teams"><b>NXS</b><span>vs</span><b>GRY</b></div>
+          <div class="match__info"><strong>Осенний кубок</strong><span>BO3 · полуфинал</span></div>
+          <span class="status status--win">2 : 0</span>
+        </article>
+        <article class="match" data-type="result">
+          <div class="match__date"><strong>14</strong><span>НОВ</span></div>
+          <div class="match__teams"><b>NXS</b><span>vs</span><b>HLX</b></div>
+          <div class="match__info"><strong>Открытая серия</strong><span>BO3 · четвертьфинал</span></div>
+          <span class="status status--win">2 : 1</span>
+        </article>
+        <article class="match" data-type="result">
+          <div class="match__date"><strong>07</strong><span>НОВ</span></div>
+          <div class="match__teams"><b>NXS</b><span>vs</span><b>STR</b></div>
+          <div class="match__info"><strong>Открытая серия</strong><span>BO1 · групповой этап</span></div>
+          <span class="status status--loss">1 : 2</span>
+        </article>
+      </div>
+      <p class="match-empty" id="matchEmpty" hidden>В этом разделе матчей пока нет.</p>
+    </div>
+  </section>
+
+  <!-- Новости -->
+  <section class="section" id="news">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <span class="eyebrow">Дневник команды</span>
+          <h2>Что у нас нового</h2>
+          <p class="section__lead">Коротко о турнирах, тренировках и наших маленьких победах.</p>
+        </div>
+      </div>
+
+      <div class="news-grid">
+        <article class="news-card" data-reveal>
+          <div class="news-card__top"><span class="news-card__tag">Турниры</span><time datetime="2026-11-21">21.11.2026</time></div>
+          <h3>Взяли бронзу на осеннем кубке</h3>
+          <p>Проиграли в полуфинале, но вытащили решающий матч за третье место.</p>
+          <p class="news-card__full">Отдельное спасибо Shift за клатч 1vs3 на Nuke — этот раунд мы будем пересматривать ещё долго.</p>
+          <button class="news-card__more" type="button" data-news-toggle>Читать заметку →</button>
+        </article>
+        <article class="news-card" data-reveal>
+          <div class="news-card__top"><span class="news-card__tag news-card__tag--violet">Тренировки</span><time datetime="2026-11-16">16.11.2026</time></div>
+          <h3>Новый план на неделю</h3>
+          <p>Добавили два вечерних спарринга и разбор ошибок после каждого BO3.</p>
+          <p class="news-card__full">Теперь смотрим не только kills, но и позиционку: кто и когда занял угол, кто подстраховал, где потеряли темп.</p>
+          <button class="news-card__more" type="button" data-news-toggle>Читать заметку →</button>
+        </article>
+        <article class="news-card" data-reveal>
+          <div class="news-card__top"><span class="news-card__tag news-card__tag--green">Команда</span><time datetime="2026-11-09">09.11.2026</time></div>
+          <h3>Ищем шестого игрока</h3>
+          <p>Нужен человек, который готов играть постоянно и не боится отвечать за раунд.</p>
+          <p class="news-card__full">Если это про вас — оставьте заявку в конце страницы. Посмотрим вместе и обсудим расписание тренировок.</p>
+          <button class="news-card__more" type="button" data-news-toggle>Читать заметку →</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Карты -->
+  <section class="section section--alt" id="maps">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <span class="eyebrow">Карты</span>
+          <h2>Где мы сильны</h2>
+          <p class="section__lead">Наш пул из пяти карт и процент побед по итогам сезона.</p>
+        </div>
+      </div>
+
+      <div class="maps">
+        <article class="map-card">
+          <div class="map-card__art map-card__art--mirage"><span>MIRAGE</span></div>
+          <div class="map-card__body"><h3>Mirage</h3><p>Любимый A-плейс и быстрые ротации.</p></div>
+          <strong>78%</strong>
+        </article>
+        <article class="map-card">
+          <div class="map-card__art map-card__art--nuke"><span>NUKE</span></div>
+          <div class="map-card__body"><h3>Nuke</h3><p>Держим верх, спокойно играем нижний.</p></div>
+          <strong>71%</strong>
+        </article>
+        <article class="map-card">
+          <div class="map-card__art map-card__art--inferno"><span>INFERNO</span></div>
+          <div class="map-card__body"><h3>Inferno</h3><p>Контроль мида и аккуратные заходы на B.</p></div>
+          <strong>64%</strong>
+        </article>
+        <article class="map-card">
+          <div class="map-card__art map-card__art--ancient"><span>ANCIENT</span></div>
+          <div class="map-card__body"><h3>Ancient</h3><p>Наш запасной вариант на неудобных соперниках.</p></div>
+          <strong>58%</strong>
+        </article>
+        <article class="map-card">
+          <div class="map-card__art map-card__art--dust"><span>DUST2</span></div>
+          <div class="map-card__body"><h3>Dust2</h3><p>Классика: быстрый A и длинный контроль B.</p></div>
+          <strong>55%</strong>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Вступление -->
+  <section class="section join" id="join">
+    <div class="container join__grid">
+      <div class="join__text">
+        <span class="eyebrow">Присоединяйся</span>
+        <h2>Есть свободный слот?</h2>
+        <p>Пиши, если играешь в CS2, готов к регулярным тренировкам и умеешь не паниковать после первого проигранного раунда.</p>
+        <ul class="check-list">
+          <li>Возраст 16+, без токсичности</li>
+          <li>Микрофон и стабильный интернет</li>
+          <li>Готовность играть в командную игру</li>
+        </ul>
+        <button class="btn btn--ghost" id="copyInviteFooter" type="button">Скопировать приглашение</button>
+      </div>
+
+      <form class="join-form" id="joinForm">
+        <label>Ник в Steam
+          <input type="text" name="nick" placeholder="Например, Vortex" required>
+        </label>
+        <label>Telegram или Discord
+          <input type="text" name="contact" placeholder="@your_nick" required>
+        </label>
+        <label class="join-form__check">
+          <input type="checkbox" name="agree" required>
+          <span>Согласен играть в командном стиле и посещать тренировки</span>
+        </label>
+        <button class="btn" type="submit">Отправить заявку</button>
+        <p class="form-note">Демонстрационная форма: данные никуда не отправляются.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="assets/img/logo.svg" alt="" width="38" height="38">
+      <strong>NEXUS</strong>
+      <p>Команда друзей по CS2. Играем честно, тренируемся регулярно.</p>
+    </div>
+    <div>
+      <h4>Навигация</h4>
+      <a href="#team">Команда</a>
+      <a href="#matches">Матчи</a>
+      <a href="#news">Новости</a>
+      <a href="#maps">Карты</a>
+    </div>
+    <div>
+      <h4>Связь</h4>
+      <button type="button" data-copy-invite>Приглашение в команду</button>
+      <span>Discord: @nexus-cs2</span>
+      <span>Telegram: @nexus_cs2</span>
+    </div>
+  </div>
+  <div class="container footer__bottom"><span>© 2026 NEXUS. Демонстрационный сайт команды друзей.</span><span>GG WP · GG WP · GG WP</span></div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

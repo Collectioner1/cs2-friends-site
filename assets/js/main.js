@@ -31,15 +31,6 @@
     if (window.innerWidth > 900) closeNav();
   });
 
-  /* Раскрытие заметок */
-  $$('[data-news-toggle]').forEach((button) => {
-    button.addEventListener('click', () => {
-      const card = button.closest('.news-card');
-      const open = card.classList.toggle('is-open');
-      button.textContent = open ? 'Свернуть ↑' : 'Читать заметку →';
-    });
-  });
-
   /* Появление блоков при прокрутке */
   const revealItems = $$('[data-reveal]');
   if ('IntersectionObserver' in window) {

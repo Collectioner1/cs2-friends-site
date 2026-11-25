@@ -91,6 +91,7 @@ img{max-width:100%;display:block}
 .radar__dot--a{left:22%;top:30%}
 .radar__dot--b{right:24%;top:42%;background:var(--red);box-shadow:0 0 14px var(--red)}
 .radar__dot--c{left:43%;bottom:20%;background:var(--yellow);box-shadow:0 0 14px var(--yellow)}
+.hero__logo{position:relative;z-index:2;display:block;width:min(100%,380px);height:auto;filter:drop-shadow(0 26px 60px rgba(0,0,0,.6))}
 .hero__sticker{position:absolute;right:6px;bottom:28px;background:var(--accent-2);color:#fff;font-weight:900;font-size:13px;letter-spacing:2px;padding:7px 14px;transform:rotate(8deg);box-shadow:0 8px 24px rgba(124,92,255,.35)}
 
 /* Секции */
@@ -131,21 +132,6 @@ img{max-width:100%;display:block}
 .match__info strong{display:block;font-size:14px}
 .match__info span{color:var(--muted);font-size:12px}
 .status{font-size:12px;font-weight:800;padding:6px 11px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
-
-/* Новости */
-.news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.news-card{display:flex;flex-direction:column;min-height:270px;background:var(--panel);border:1px solid var(--line);padding:24px;transition:.2s}
-.news-card:hover{transform:translateY(-4px);border-color:rgba(124,92,255,.5);box-shadow:0 18px 40px rgba(0,0,0,.35)}
-.news-card__top{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;color:var(--muted)}
-.news-card__tag{background:rgba(0,229,255,.1);color:var(--accent);padding:4px 9px;font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
-.news-card__tag--violet{background:rgba(124,92,255,.13);color:#b39cff}
-.news-card__tag--green{background:rgba(57,230,160,.1);color:var(--green)}
-.news-card h3{font-size:20px;line-height:1.25;margin:18px 0 10px}
-.news-card p{color:var(--muted);font-size:13.5px;margin:0 0 16px}
-.news-card__full{display:none;color:var(--text);font-size:13px;padding-top:12px;border-top:1px solid var(--line)}
-.news-card.is-open .news-card__full{display:block}
-.news-card__more{margin-top:auto;padding:0;border:0;background:none;color:var(--accent);font-size:12.5px;font-weight:800;letter-spacing:.6px;text-align:left}
-.news-card.is-open .news-card__more{color:var(--muted)}
 
 /* Карты */
 .maps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
@@ -195,7 +181,6 @@ img{max-width:100%;display:block}
   .hero{padding:56px 0 42px}
   .hero__grid{grid-template-columns:1fr;gap:20px}
   .hero__visual{min-height:360px}
-  .news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .match{grid-template-columns:64px 1fr 1fr;gap:14px}
   .match--weekly{grid-template-columns:64px 1fr}
   .match .status{grid-column:2 / -1;justify-self:start}
@@ -211,6 +196,7 @@ img{max-width:100%;display:block}
   .hero__stats dd{font-size:24px}
   .hero__visual{min-height:300px}
   .radar{width:280px;height:280px}
+  .hero__logo{width:min(100%,260px)}
   .hero__sticker{bottom:8px;right:0;font-size:11px}
   .section{padding:60px 0}
   .section__head{align-items:flex-start;flex-direction:column;gap:18px}
@@ -226,8 +212,6 @@ img{max-width:100%;display:block}
   .match__teams{grid-column:2;min-width:0}
   .match__info{grid-column:1 / -1;padding-top:10px;border-top:1px solid var(--line)}
   .match .status{grid-column:1 / -1}
-  .news-grid{grid-template-columns:1fr}
-  .news-card{min-height:0}
   .maps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .footer__inner{grid-template-columns:1fr}
   .footer__bottom{flex-direction:column;gap:6px}

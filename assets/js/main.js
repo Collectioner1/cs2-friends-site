@@ -5,16 +5,6 @@
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 
-  /* Уведомления */
-  const toast = $('#toast');
-  let toastTimer;
-  function showToast(text) {
-    toast.textContent = text;
-    toast.classList.add('is-visible');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 2800);
-  }
-
   /* Мобильное меню */
   const burger = $('#burger');
   const nav = $('#nav');
@@ -71,51 +61,6 @@
       const open = card.classList.toggle('is-open');
       button.textContent = open ? 'Свернуть ↑' : 'Читать заметку →';
     });
-  });
-
-  /* Копирование приглашения */
-  const inviteText = 'Присоединяйся к NEXUS: Discord @nexus-cs2, Telegram @nexus_cs2. Ищем Sixth игрока в команду друзей по CS2.';
-
-  async function copyInvite() {
-    let copied = false;
-
-    if (navigator.clipboard && window.isSecureContext) {
-      try {
-        await navigator.clipboard.writeText(inviteText);
-        copied = true;
-      } catch (error) {
-        copied = false;
-      }
-    }
-
-    if (!copied) {
-      try {
-        const field = document.createElement('textarea');
-        field.value = inviteText;
-        field.setAttribute('readonly', '');
-        field.style.position = 'fixed';
-        field.style.opacity = '0';
-        document.body.appendChild(field);
-        field.select();
-        copied = document.execCommand('copy');
-        field.remove();
-      } catch (error) {
-        copied = false;
-      }
-    }
-
-    showToast(copied ? 'Приглашение скопировано' : 'Не удалось скопировать — используйте контакты в подвале');
-  }
-
-  $$('#copyInvite, #copyInviteFooter, [data-copy-invite]').forEach((button) => {
-    button.addEventListener('click', copyInvite);
-  });
-
-  /* Демонстрационная заявка */
-  $('#joinForm').addEventListener('submit', (event) => {
-    event.preventDefault();
-    event.target.reset();
-    showToast('Заявка принята (демонстрация). Мы свяжемся!');
   });
 
   /* Появление блоков при прокрутке */

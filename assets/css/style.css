@@ -133,22 +133,18 @@ img{max-width:100%;display:block}
 .match__info span{color:var(--muted);font-size:12px}
 .status{font-size:12px;font-weight:800;padding:6px 11px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
 
-/* Карты */
-.maps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
-.map-card{position:relative;min-width:0;background:var(--panel);border:1px solid var(--line);overflow:hidden}
-.map-card__art{position:relative;height:130px;display:grid;place-items:center;overflow:hidden}
-.map-card__art::before{content:"";position:absolute;inset:-20%;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:22px 22px;transform:rotate(-12deg)}
-.map-card__art::after{content:"";position:absolute;width:90px;height:90px;border:1px solid rgba(255,255,255,.22);border-radius:50%;box-shadow:0 0 0 20px rgba(255,255,255,.04)}
-.map-card__art span{position:relative;z-index:1;font-weight:900;letter-spacing:3px;font-size:15px;color:rgba(255,255,255,.85)}
-.map-card__art--mirage{background:linear-gradient(135deg,#284a3a,#101a24)}
-.map-card__art--nuke{background:linear-gradient(135deg,#39404d,#101722)}
-.map-card__art--inferno{background:linear-gradient(135deg,#5b3627,#181520)}
-.map-card__art--ancient{background:linear-gradient(135deg,#244a3c,#0d1a20)}
-.map-card__art--dust{background:linear-gradient(135deg,#6a5330,#1a1720)}
-.map-card__body{padding:16px}
-.map-card__body h3{margin:0 0 6px;font-size:17px}
-.map-card__body p{margin:0;color:var(--muted);font-size:12px;min-height:56px}
-.map-card>strong{position:absolute;right:12px;top:12px;z-index:2;background:rgba(8,12,20,.82);border:1px solid rgba(0,229,255,.35);color:var(--accent);padding:4px 8px;font-size:12px}
+/* Статистика */
+.stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.stat-card{min-width:0;background:var(--panel);border:1px solid var(--line);padding:18px}
+.stat-card__head{display:flex;align-items:center;gap:12px;min-width:0;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.stat-card__avatar{width:48px;height:48px;flex:0 0 auto;object-fit:cover;border:1px solid rgba(0,229,255,.35)}
+.stat-card__head>div{min-width:0}
+.stat-card__head h3{margin:0;font-size:16px;line-height:1.25;overflow-wrap:anywhere}
+.stat-card__head span{font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+.stat-card__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:14px;background:var(--line);border:1px solid var(--line)}
+.stat-card__grid>div{display:flex;flex-direction:column;gap:2px;min-width:0;background:#0d1524;padding:10px 12px}
+.stat-card__grid strong{font-size:17px;line-height:1.2;color:#fff}
+.stat-card__grid span{font-size:10.5px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted)}
 
 /* Подвал */
 .footer{background:#050810;border-top:1px solid var(--line);padding:54px 0 22px;color:var(--muted)}
@@ -168,7 +164,7 @@ img{max-width:100%;display:block}
 /* Адаптив */
 @media (max-width:1100px){
   .roster{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .maps{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .nav{gap:18px}
   .hero__grid{gap:36px}
 }
@@ -213,7 +209,7 @@ img{max-width:100%;display:block}
   .match__teams{grid-column:2;min-width:0}
   .match__info{grid-column:1 / -1;padding-top:10px;border-top:1px solid var(--line)}
   .match .status{grid-column:1 / -1}
-  .maps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stats-grid{grid-template-columns:1fr}
   .footer__inner{grid-template-columns:1fr}
   .footer__bottom{flex-direction:column;gap:6px}
 }
@@ -225,7 +221,6 @@ img{max-width:100%;display:block}
   .hero h1{font-size:32px}
   .hero__stats dd{font-size:22px}
   .roster{grid-template-columns:1fr}
-  .maps{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}

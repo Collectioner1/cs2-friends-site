@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SORMOVO — команда друзей по CS2</title>
-  <meta name="description" content="SORMOVO — команда друзей по Counter-Strike 2: состав, ближайшие игры и любимые карты.">
+  <meta name="description" content="SORMOVO — команда друзей по Counter-Strike 2: состав, ближайшие игры и статистика игроков.">
   <meta name="theme-color" content="#080c14">
   <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -23,7 +23,7 @@
     <nav class="nav" id="nav" aria-label="Основная навигация">
       <a href="#team">Команда</a>
       <a href="#matches">Матчи</a>
-      <a href="#maps">Карты</a>
+      <a href="#stats">Статистика</a>
     </nav>
 
     <div class="header__actions">
@@ -169,42 +169,82 @@
     </div>
   </section>
 
-  <!-- Карты -->
-  <section class="section section--alt" id="maps">
+  <!-- Статистика -->
+  <section class="section section--alt" id="stats">
     <div class="container">
       <div class="section__head">
         <div>
-          <span class="eyebrow">Карты</span>
-          <h2>Где мы сильны</h2>
-          <p class="section__lead">Наш пул из пяти карт и процент побед по итогам сезона.</p>
+          <span class="eyebrow">Итоги года</span>
+          <h2>Суммарная статистика игрока</h2>
+          <p class="section__lead">Сводка по каждому игроку команды за 2026 год.</p>
         </div>
+        <span class="section__meta">Демонстрационные данные · 2026</span>
       </div>
 
-      <div class="maps">
-        <article class="map-card">
-          <div class="map-card__art map-card__art--dust"><span>DUST2</span></div>
-          <div class="map-card__body"><h3>Dust2</h3><p>Классика: быстрый A и длинный контроль B.</p></div>
-          <strong>82%</strong>
+      <div class="stats-grid">
+        <article class="stat-card" data-reveal>
+          <div class="stat-card__head">
+            <img class="stat-card__avatar" src="assets/img/avatars/ezh.jpg" alt="" width="48" height="48">
+            <div><h3>Ёж наводчик</h3><span>IGL · капитан</span></div>
+          </div>
+          <div class="stat-card__grid">
+            <div><strong>128</strong><span>матчей</span></div>
+            <div><strong>79</strong><span>побед</span></div>
+            <div><strong>1.12</strong><span>K/D</span></div>
+            <div><strong>47%</strong><span>хедшотов</span></div>
+            <div><strong>2 841</strong><span>убийств</span></div>
+            <div><strong>2 537</strong><span>смертей</span></div>
+            <div><strong>18%</strong><span>клатчей</span></div>
+            <div><strong>214</strong><span>часов</span></div>
+          </div>
         </article>
-        <article class="map-card">
-          <div class="map-card__art map-card__art--mirage"><span>MIRAGE</span></div>
-          <div class="map-card__body"><h3>Mirage</h3><p>Любимый A-плейс и быстрые ротации.</p></div>
-          <strong>78%</strong>
+        <article class="stat-card" data-reveal>
+          <div class="stat-card__head">
+            <img class="stat-card__avatar" src="assets/img/avatars/otaku.jpg" alt="" width="48" height="48">
+            <div><h3>꧁༺OTAKU༻꧂</h3><span>AWP · снайпер</span></div>
+          </div>
+          <div class="stat-card__grid">
+            <div><strong>134</strong><span>матчей</span></div>
+            <div><strong>91</strong><span>побед</span></div>
+            <div><strong>1.24</strong><span>K/D</span></div>
+            <div><strong>56%</strong><span>хедшотов</span></div>
+            <div><strong>3 106</strong><span>убийств</span></div>
+            <div><strong>2 504</strong><span>смертей</span></div>
+            <div><strong>24%</strong><span>клатчей</span></div>
+            <div><strong>236</strong><span>часов</span></div>
+          </div>
         </article>
-        <article class="map-card">
-          <div class="map-card__art map-card__art--nuke"><span>NUKE</span></div>
-          <div class="map-card__body"><h3>Nuke</h3><p>Держим верх, спокойно играем нижний.</p></div>
-          <strong>71%</strong>
+        <article class="stat-card" data-reveal>
+          <div class="stat-card__head">
+            <img class="stat-card__avatar" src="assets/img/avatars/hotdog.jpg" alt="" width="48" height="48">
+            <div><h3>HotDog</h3><span>Entry · первый</span></div>
+          </div>
+          <div class="stat-card__grid">
+            <div><strong>119</strong><span>матчей</span></div>
+            <div><strong>64</strong><span>побед</span></div>
+            <div><strong>1.08</strong><span>K/D</span></div>
+            <div><strong>41%</strong><span>хедшотов</span></div>
+            <div><strong>2 512</strong><span>убийств</span></div>
+            <div><strong>2 326</strong><span>смертей</span></div>
+            <div><strong>11%</strong><span>клатчей</span></div>
+            <div><strong>198</strong><span>часов</span></div>
+          </div>
         </article>
-        <article class="map-card">
-          <div class="map-card__art map-card__art--inferno"><span>INFERNO</span></div>
-          <div class="map-card__body"><h3>Inferno</h3><p>Контроль мида и аккуратные заходы на B.</p></div>
-          <strong>64%</strong>
-        </article>
-        <article class="map-card">
-          <div class="map-card__art map-card__art--ancient"><span>ANCIENT</span></div>
-          <div class="map-card__body"><h3>Ancient</h3><p>Наш запасной вариант на неудобных соперниках.</p></div>
-          <strong>58%</strong>
+        <article class="stat-card" data-reveal>
+          <div class="stat-card__head">
+            <img class="stat-card__avatar" src="assets/img/avatars/dima.jpg" alt="" width="48" height="48">
+            <div><h3>DimaFriendlyFire</h3><span>Support · саппорт</span></div>
+          </div>
+          <div class="stat-card__grid">
+            <div><strong>121</strong><span>матчей</span></div>
+            <div><strong>55</strong><span>побед</span></div>
+            <div><strong>0.94</strong><span>K/D</span></div>
+            <div><strong>38%</strong><span>хедшотов</span></div>
+            <div><strong>2 233</strong><span>убийств</span></div>
+            <div><strong>2 376</strong><span>смертей</span></div>
+            <div><strong>0%</strong><span>клатчей</span></div>
+            <div><strong>187</strong><span>часов</span></div>
+          </div>
         </article>
       </div>
     </div>
@@ -223,7 +263,7 @@
       <h4>Навигация</h4>
       <a href="#team">Команда</a>
       <a href="#matches">Матчи</a>
-      <a href="#maps">Карты</a>
+      <a href="#stats">Статистика</a>
     </div>
     <div>
       <h4>Связь</h4>

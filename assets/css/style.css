@@ -91,14 +91,6 @@ img{max-width:100%;display:block}
 .radar__dot--a{left:22%;top:30%}
 .radar__dot--b{right:24%;top:42%;background:var(--red);box-shadow:0 0 14px var(--red)}
 .radar__dot--c{left:43%;bottom:20%;background:var(--yellow);box-shadow:0 0 14px var(--yellow)}
-.score-card{position:relative;width:min(100%,420px);background:linear-gradient(155deg,rgba(22,34,56,.97),rgba(9,14,24,.97));border:1px solid var(--line);padding:24px;box-shadow:0 28px 70px rgba(0,0,0,.55),inset 0 0 0 1px rgba(0,229,255,.05);transform:rotate(-2deg)}
-.score-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--accent),var(--accent-2))}
-.score-card__top{display:flex;justify-content:space-between;gap:10px;font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
-.score-card__teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;margin:22px 0;text-align:center}
-.score-card__teams b{display:block;font-size:26px;letter-spacing:2px}
-.score-card__teams small{font-size:11px;color:var(--muted)}
-.score-card__teams strong{font-size:34px;color:var(--accent);text-shadow:0 0 20px rgba(0,229,255,.45)}
-.score-card__maps{border-top:1px solid var(--line);padding-top:14px;font-size:12px;color:var(--muted)}
 .hero__sticker{position:absolute;right:6px;bottom:28px;background:var(--accent-2);color:#fff;font-weight:900;font-size:13px;letter-spacing:2px;padding:7px 14px;transform:rotate(8deg);box-shadow:0 8px 24px rgba(124,92,255,.35)}
 
 /* Секции */
@@ -219,9 +211,6 @@ img{max-width:100%;display:block}
   .hero__stats dd{font-size:24px}
   .hero__visual{min-height:300px}
   .radar{width:280px;height:280px}
-  .score-card{padding:18px}
-  .score-card__teams b{font-size:20px}
-  .score-card__teams strong{font-size:26px}
   .hero__sticker{bottom:8px;right:0;font-size:11px}
   .section{padding:60px 0}
   .section__head{align-items:flex-start;flex-direction:column;gap:18px}

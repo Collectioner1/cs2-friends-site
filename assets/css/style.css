@@ -150,11 +150,12 @@ img{max-width:100%;display:block}
 .stats-subhead p{margin:0;color:var(--muted);font-size:13px}
 .leaderboard__scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line)}
 .leaderboard{width:100%;min-width:620px;border-collapse:collapse;background:rgba(13,21,36,.9);font-size:13px}
-.leaderboard th,.leaderboard td{padding:12px 14px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+.leaderboard th,.leaderboard td{padding:12px 14px;text-align:right;border-bottom:1px solid var(--line);border-right:1px solid var(--line);white-space:nowrap}
+.leaderboard th:last-child,.leaderboard td:last-child{border-right:0}
+.leaderboard tbody tr:last-child th,.leaderboard tbody tr:last-child td{border-bottom:0}
 .leaderboard th:first-child,.leaderboard td:first-child,.leaderboard tbody th{text-align:left}
 .leaderboard thead th{font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:700;background:rgba(255,255,255,.03)}
 .leaderboard tbody th{font-weight:700;color:var(--text)}
-.leaderboard tbody tr:last-child th,.leaderboard tbody tr:last-child td{border-bottom:0}
 .leaderboard tbody tr:hover{background:rgba(0,229,255,.05)}
 .leaderboard__place{font-weight:900;color:var(--accent);font-size:16px}
 

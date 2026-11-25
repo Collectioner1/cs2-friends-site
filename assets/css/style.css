@@ -127,13 +127,9 @@ img{max-width:100%;display:block}
 .player__stats span{font-size:11px;color:var(--muted)}
 
 /* Матчи */
-.tabs{display:flex;gap:5px;background:rgba(255,255,255,.03);padding:5px;border:1px solid var(--line)}
-.tab{border:0;background:transparent;color:var(--muted);padding:9px 15px;font-size:12.5px;font-weight:700;white-space:nowrap}
-.tab span{display:inline-grid;place-items:center;min-width:19px;height:19px;margin-left:5px;padding:0 5px;background:rgba(255,255,255,.07);font-size:10px}
-.tab.is-active{background:linear-gradient(135deg,var(--accent),#00a8ff);color:#04121a}
-.tab.is-active span{background:rgba(4,18,26,.18)}
 .match-list{display:flex;flex-direction:column;gap:10px}
 .match{display:grid;grid-template-columns:70px 1fr 1.4fr auto;align-items:center;gap:20px;padding:18px 22px;background:rgba(18,27,44,.76);border:1px solid var(--line);transition:.18s}
+.match--weekly{grid-template-columns:70px 1fr auto}
 .match:hover{border-color:rgba(0,229,255,.35);transform:translateX(3px)}
 .match__date{display:flex;flex-direction:column;align-items:center;border-right:1px solid var(--line);padding-right:18px}
 .match__date strong{font-size:26px;line-height:1}
@@ -143,10 +139,6 @@ img{max-width:100%;display:block}
 .match__info strong{display:block;font-size:14px}
 .match__info span{color:var(--muted);font-size:12px}
 .status{font-size:12px;font-weight:800;padding:6px 11px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
-.status--soon{color:var(--yellow);border-color:rgba(255,200,87,.35)}
-.status--win{color:var(--green);border-color:rgba(57,230,160,.35)}
-.status--loss{color:var(--red);border-color:rgba(255,77,109,.35)}
-.match-empty{padding:24px;color:var(--muted);border:1px dashed var(--line)}
 
 /* Новости */
 .news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
@@ -213,6 +205,7 @@ img{max-width:100%;display:block}
   .hero__visual{min-height:360px}
   .news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .match{grid-template-columns:64px 1fr 1fr;gap:14px}
+  .match--weekly{grid-template-columns:64px 1fr}
   .match .status{grid-column:2 / -1;justify-self:start}
 }
 @media (max-width:640px){
@@ -238,9 +231,8 @@ img{max-width:100%;display:block}
   .player h3{font-size:18px}
   .player p{font-size:12px;min-height:0}
   .player__stats{gap:12px}
-  .tabs{width:100%}
-  .tab{flex:1;padding:9px 8px;font-size:12px}
   .match{grid-template-columns:56px minmax(0,1fr);gap:12px;padding:14px}
+  .match--weekly{grid-template-columns:56px minmax(0,1fr)}
   .match__date{padding-right:12px}
   .match__teams{grid-column:2;min-width:0}
   .match__info{grid-column:1 / -1;padding-top:10px;border-top:1px solid var(--line)}

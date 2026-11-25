@@ -31,29 +31,6 @@
     if (window.innerWidth > 900) closeNav();
   });
 
-  /* Фильтр матчей */
-  const tabs = $$('.tab');
-  const matches = $$('.match');
-  const matchEmpty = $('#matchEmpty');
-
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      tabs.forEach((item) => {
-        const active = item === tab;
-        item.classList.toggle('is-active', active);
-        item.setAttribute('aria-selected', String(active));
-      });
-
-      let visible = 0;
-      matches.forEach((match) => {
-        const show = match.dataset.type === tab.dataset.tab;
-        match.hidden = !show;
-        if (show) visible++;
-      });
-      matchEmpty.hidden = visible > 0;
-    });
-  });
-
   /* Раскрытие заметок */
   $$('[data-news-toggle]').forEach((button) => {
     button.addEventListener('click', () => {

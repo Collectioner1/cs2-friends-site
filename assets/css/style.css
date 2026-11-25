@@ -54,12 +54,12 @@ img{max-width:100%;display:block}
 /* Шапка */
 .site-header{position:sticky;top:0;z-index:50;background:rgba(8,12,20,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .header__inner{display:flex;align-items:center;gap:30px;min-height:74px}
-.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto;min-height:44px}
 .brand__text{display:flex;flex-direction:column;line-height:1.1}
 .brand__text strong{font-size:20px;letter-spacing:3px;font-weight:900}
 .brand__text small{font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
 .nav{display:flex;align-items:center;gap:26px;margin-left:auto}
-.nav a{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap}
+.nav a{padding:12px 0;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap}
 .nav a:hover{color:var(--accent)}
 .header__actions{display:flex;align-items:center;gap:10px}
 .burger{display:none;width:40px;height:38px;border:1px solid var(--line);background:rgba(255,255,255,.03);padding:9px}
@@ -112,7 +112,7 @@ img{max-width:100%;display:block}
 .player__avatar:hover img{transform:scale(1.06)}
 .player__avatar:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .player__role{font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent);font-weight:700}
-.player h3{font-size:21px;margin:6px 0 8px;line-height:1.2}
+.player h3{font-size:21px;margin:6px 0 8px;line-height:1.2;overflow-wrap:anywhere}
 .player p{color:var(--muted);font-size:13px;min-height:62px;margin:0 0 16px}
 .player__stats{display:flex;gap:18px;border-top:1px solid var(--line);padding-top:14px}
 .player__stats div{display:flex;flex-direction:column}
@@ -174,16 +174,17 @@ img{max-width:100%;display:block}
 }
 @media (max-width:900px){
   .header__inner{min-height:66px}
-  .burger{display:block}
+  .burger{display:block;width:44px;height:44px}
   .nav{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:0;margin:0;padding:10px 20px 16px;background:#0b1120;border-bottom:1px solid var(--line);max-height:calc(100vh - 90px);overflow-y:auto}
   .nav.is-open{display:flex}
-  .nav a{padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .nav a{padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
   .hero{padding:56px 0 42px}
   .hero__grid{grid-template-columns:1fr;gap:20px}
   .hero__visual{min-height:360px}
   .match{grid-template-columns:64px 1fr 1fr;gap:14px}
   .match--weekly{grid-template-columns:64px 1fr}
   .match .status{grid-column:2 / -1;justify-self:start}
+  .footer a,.footer button{padding:11px 0;margin-bottom:0}
 }
 @media (max-width:640px){
   .container{width:calc(100% - 28px)}
@@ -203,7 +204,7 @@ img{max-width:100%;display:block}
   .roster{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
   .player{padding:16px 14px}
   .player__avatar{width:60px;height:60px;font-size:18px}
-  .player h3{font-size:18px}
+  .player h3{font-size:16px}
   .player p{font-size:12px;min-height:0}
   .player__stats{gap:12px}
   .match{grid-template-columns:56px minmax(0,1fr);gap:12px;padding:14px}
@@ -220,10 +221,11 @@ img{max-width:100%;display:block}
   .header__inner{gap:8px}
   .header__actions{gap:6px}
   .brand{gap:8px}
-  .burger{width:36px;padding:7px}
-  .maps{grid-template-columns:1fr}
+  .burger{width:44px;padding:9px}
   .hero h1{font-size:32px}
   .hero__stats dd{font-size:22px}
+  .roster{grid-template-columns:1fr}
+  .maps{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
